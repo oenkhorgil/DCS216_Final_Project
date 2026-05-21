@@ -11,7 +11,7 @@ all_dataframes = []
 for csv_file in source_folder.rglob("*.csv"):
     name = csv_file.name
 
-    if ".tck_fielddata." in name:
+    if ".tck_taxonomyProcessed." in name:
         try:
             df = pd.read_csv(csv_file)
 
@@ -27,7 +27,7 @@ for csv_file in source_folder.rglob("*.csv"):
 
 combined_df = pd.concat(all_dataframes, ignore_index=True)
 
-output_file = output_folder / "combined_tck_fielddata.csv"
+output_file = output_folder / "combined_tck_taxdata.csv"
 combined_df.to_csv(output_file, index=False)
 
 print(f"\nSaved combined CSV to: {output_file}")
