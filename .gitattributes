@@ -1,0 +1,6 @@
+*.csv filter=lfs diff=lfs merge=lfs -text
+*.txt filter=lfs diff=lfs merge=lfs -text
+*.json filter=lfs diff=lfs merge=lfs -text
+NEON_rel-humidity/** filter=lfs diff=lfs merge=lfs -text
+NEON_count-ticks/** filter=lfs diff=lfs merge=lfs -text
+NEON_pathogens-tick/** filter=lfs diff=lfs merge=lfs -text
